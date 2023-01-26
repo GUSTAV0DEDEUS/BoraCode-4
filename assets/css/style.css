@@ -1,0 +1,136 @@
+/* RESET */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  /* neutral colors */
+  --neutral-color-white : #E1E1E6;
+
+  /* components element color */
+  --background-color: #1A1924;
+  --primary-color-purple : #633BBC;
+  --primary-color-green: #07847E;
+  --secundary-color-green: #00B37E;
+}
+
+/* style */
+main{
+  background-color: var(--background-color);
+  color: var(--neutral-color-white);
+  width: 100vw;
+  height: 100vh;
+  overflow-y: hidden;
+}
+.container{
+  width: 100%;
+  height: 100%;
+  padding: 32px 72px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.details{
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+.details .firstLine{
+  width: 100%;
+  display: flex;
+  justify-content: space-between; 
+  align-items: flex-end;
+}
+.details .firstLine .avatar{
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.details .firstLine .avatar .info .name{
+   font-family: "Roboto", sans-serif;
+   font-weight: 700;
+   font-size: 16px;
+   line-height: 125%;
+}
+.details .firstLine .avatar .info .status{
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  color: var(--secundary-color-green);
+}
+.details .firstLine .avatar .info .status span{
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--secundary-color-green);
+}
+.details .secondLine div{
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+}
+.contentMessage {
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.contentMessage .boxMessage{
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+}
+.contentMessage .boxMessage:nth-child(2n){
+  justify-content: flex-end;
+}
+.contentMessage .boxMessage:nth-child(2n) .message .messageText{
+  border-radius: 8px 8px 0px 8px;
+  padding: 14px;
+  background: var(--primary-color-green);
+}
+.contentMessage .boxMessage .message{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.contentMessage .boxMessage .message .messageText{
+  border-radius: 0 8px 8px 8px;
+  padding: 14px;
+  background: var(--primary-color-purple);
+}
+.sendInput{
+  display: flex;
+  position: relative;
+  width: 100%;
+}
+.sendInput input{
+  background-color: #282843;
+  border: 0;
+  outline: 0;
+  border-radius: 999px;
+  padding: 19px 58px 19px 24px ;
+  width: 100%;
+  color: var(--neutral-color-white);
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+}
+.sendInput input::placeholder{
+   color: var(--neutral-color-white);
+}
+.sendInput label{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 14px;
+  cursor: pointer;
+}
